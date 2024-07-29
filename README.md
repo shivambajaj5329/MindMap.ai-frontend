@@ -32,7 +32,7 @@ To get a local copy up and running, follow these simple steps.
 ### Installation
 
 1. Clone the repo
-   git clone https://github.com/your_username_/MindMapAI.git
+   git clone https://github.com/shivambajaj5329/MindMap.ai-frontend
 
 2. Navigate to the project directory
    cd MindMapAI
@@ -77,4 +77,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - your_email@example.com
 
-Project Link: https://github.com/your_username_/MindMapAI
+Project Link: https://github.com/shivambajaj5329/MindMap.ai-frontend
