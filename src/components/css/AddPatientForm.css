@@ -1,0 +1,113 @@
+.add-patient-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.add-patient-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.add-patient-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-patient-form label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.add-patient-form input[type="text"],
+.add-patient-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.add-patient-form input[type="text"]:focus,
+.add-patient-form input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.file-input-label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-button:hover {
+  background-color: #2980b9;
+}
+
+.image-preview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-patient-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.add-patient-form button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}

@@ -1,0 +1,168 @@
+.patient-instance {
+  padding: 20px;
+  padding-top: 120px; /* Gives space for the header */
+}
+
+.patient-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+  background-color: #f8f9fa; /* Light background for the header */
+}
+
+.patient-details {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.patient-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-left: 20px;
+}
+
+.patient-info {
+  text-align: right;
+}
+
+.patient-info h1 {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.patient-info p {
+  margin: 2px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.upload-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.file-name {
+  margin-left: 10px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+}
+
+textarea, input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.summary-list {
+  margin-top: 30px;
+}
+
+.summary-container {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.summary-header span {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4d4d;
+  font-size: 16px;
+  padding: 5px;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  color: #ff0000;
+}
+
+.summary-details {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.feedback-buttons {
+  margin-top: 10px;
+}
+
+.feedback-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+}

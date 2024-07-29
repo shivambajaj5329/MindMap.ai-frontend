@@ -1,0 +1,134 @@
+.container {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.upload-container {
+  margin-bottom: 20px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.upload-container input[type="file"] {
+  display: none;
+}
+
+.upload-container .file-upload-label {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+.file-name {
+  margin-left: auto;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.upload-container input[type="text"],
+.upload-container textarea {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.upload-container textarea {
+  height: 60px;
+}
+
+.upload-container .button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.upload-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-container button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.summary-list {
+  margin-top: 20px;
+}
+
+.summary-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.summary-date {
+  color: gray;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.feedback-buttons {
+  margin-top: 10px;
+}
+
+.feedback-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.feedback-buttons button:hover {
+  color: blue;
+}
+
+.loading-message {
+  margin: 10px 0;
+  color: blue;
+  text-align: center;
+}
+
+.summary-details {
+  margin-top: 10px;
+}
