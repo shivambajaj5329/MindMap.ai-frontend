@@ -81,8 +81,8 @@ function PatientInstance() {
       let defaultLabel = `${file.name.split('.')[0]}_${therapyDate}`;
       const label = summaryLabel || defaultLabel;
       formData.append('label', label);
-
-      const response = await axios.post(process.env.API_ENDPOINT_UPLOAD, formData);
+      let endpoint_upload = process.env.REACT_APP_API_ENDPOINT_UPLOAD
+      const response = await axios.post(endpoint_upload, formData);
 
       const newSummary = {
         label: label,
