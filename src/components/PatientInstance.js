@@ -82,7 +82,7 @@ function PatientInstance() {
       const label = summaryLabel || defaultLabel;
       formData.append('label', label);
 
-      const response = await axios.post('https://mindmap-backend-l7dt67dwaa-ue.a.run.app/upload', formData);
+      const response = await axios.post(process.env.API_ENDPOINT_UPLOAD, formData);
 
       const newSummary = {
         label: label,
