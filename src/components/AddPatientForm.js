@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc,serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage, auth } from '../firebase';
 import './css/AddPatientForm.css';
@@ -30,7 +30,8 @@ function AddPatientForm() {
       const imageUrl = await getDownloadURL(imageRef);
 
       const patientRef = collection(db, 'users', userId, 'patients');
-      await addDoc(patientRef, { firstName, lastName, age, city, image: imageUrl });
+      await addDoc(patientRef, { firstName, lastName, age, city, image: imageUrl,createdAt: serverTimestamp()
+      });
 
       navigate('/dashboard');
     } catch (error) {
@@ -78,18 +79,18 @@ function AddPatientForm() {
           required
         />
 
-<label htmlFor="image" className="file-input-label">
-  <div className="file-input-wrapper">
-    <span className="file-input-button">Upload Picture</span>
-    <input
-      type="file"
-      id="image"
-      onChange={handleImageChange}
-      accept="image/*"
-      required
-    />
-  </div>
-</label>
+        <label htmlFor="image" className="file-input-label">
+          <div className="file-input-wrapper">
+            <span className="file-input-button">Upload Picture</span>
+            <input
+              type="file"
+              id="image"
+              onChange={handleImageChange}
+              accept="image/*"
+              required
+            />
+          </div>
+        </label>
 
         {imagePreview && (
           <div className="image-preview">

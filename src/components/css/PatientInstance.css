@@ -3,7 +3,7 @@
   padding-top: 120px; /* Gives space for the header */
 }
 
-.patient-header {
+.patient-instance .patient-header {
   position: absolute;
   top: 0;
   right: 0;
@@ -15,13 +15,13 @@
   background-color: #f8f9fa; /* Light background for the header */
 }
 
-.patient-details {
+.patient-instance .patient-details {
   display: flex;
   align-items: center;
   text-align: right;
 }
 
-.patient-image {
+.patient-instance .patient-image {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -30,22 +30,22 @@
   margin-left: 20px;
 }
 
-.patient-info {
+.patient-instance .patient-info {
   text-align: right;
 }
 
-.patient-info h1 {
+.patient-instance .patient-info h1 {
   margin-bottom: 5px;
   font-size: 1.5em;
 }
 
-.patient-info p {
+.patient-instance .patient-info p {
   margin: 2px 0;
   font-size: 0.9em;
   color: #666;
 }
 
-.upload-container {
+.patient-instance .upload-container {
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -53,13 +53,13 @@
   max-width: 600px;
 }
 
-.file-input-wrapper {
+.patient-instance .file-input-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.file-upload-label {
+.patient-instance .file-upload-label {
   display: inline-block;
   padding: 10px;
   background-color: #f0f0f0;
@@ -69,19 +69,21 @@
   margin-right: 10px;
 }
 
-.file-name {
+.patient-instance .file-name {
   margin-left: 10px;
 }
 
-.button-container {
+.patient-instance .button-container {
   margin-top: 20px;
 }
 
-.error-message {
+.patient-instance .error-message {
   color: red;
 }
 
-textarea, input[type="text"], input[type="date"] {
+.patient-instance textarea,
+.patient-instance input[type="text"],
+.patient-instance input[type="date"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -89,11 +91,11 @@ textarea, input[type="text"], input[type="date"] {
   border: 1px solid #ddd;
 }
 
-input[type="file"] {
+.patient-instance input[type="file"] {
   display: none;
 }
 
-button {
+.patient-instance button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -102,15 +104,15 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.patient-instance button:hover {
   background-color: #0056b3;
 }
 
-.summary-list {
+.patient-instance .summary-list {
   margin-top: 30px;
 }
 
-.summary-container {
+.patient-instance .summary-container {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
@@ -118,7 +120,7 @@ button:hover {
   text-align: left;
 }
 
-.summary-header {
+.patient-instance .summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,12 +130,12 @@ button:hover {
   border-radius: 5px;
 }
 
-.summary-header span {
+.patient-instance .summary-header span {
   font-weight: bold;
   flex-grow: 1;
 }
 
-.delete-button {
+.patient-instance .delete-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -144,22 +146,22 @@ button:hover {
   margin-left: 10px;
 }
 
-.delete-button:hover {
+.patient-instance .delete-button:hover {
   color: #ff0000;
 }
 
-.summary-details {
+.patient-instance .summary-details {
   margin-top: 10px;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 5px;
 }
 
-.feedback-buttons {
+.patient-instance .feedback-buttons {
   margin-top: 10px;
 }
 
-.feedback-buttons button {
+.patient-instance .feedback-buttons button {
   background: none;
   border: none;
   cursor: pointer;

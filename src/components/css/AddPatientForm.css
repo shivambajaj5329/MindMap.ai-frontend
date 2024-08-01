@@ -1,3 +1,4 @@
+/* Add Patient Form CSS */
 .add-patient-form {
   max-width: 400px;
   margin: 40px auto;
@@ -82,9 +83,10 @@
 }
 
 .image-preview img {
-  max-width: 100%;
-  max-height: 200px;
-  border-radius: 8px;
+  width: 120px;  /* Adjust width and height to match your container */
+  height: 120px; /* Adjust width and height to match your container */
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
