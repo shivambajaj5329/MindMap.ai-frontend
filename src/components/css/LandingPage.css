@@ -1,45 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-.landing-page {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5f7fa;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
-  padding: 50px 20px;
-  min-height: 100vh;
+}
+
+.landing-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .landing-page h1 {
   color: #2c3e50;
   font-weight: 600;
   font-size: 2.5rem;
-  margin-bottom: 40px;
-  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .landing-page .login-form {
   background-color: white;
-  padding: 30px 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
 }
 
 .landing-page .login-form input {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 14px;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .landing-page .login-form input:focus {
@@ -48,18 +52,18 @@
 }
 
 .landing-page .login-form button {
-  background-color: #3498db;
+  width: 100%;
+  background-color: #4285f4;
   border: none;
   color: white;
-  padding: 12px 24px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .landing-page .login-form button:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
+  background-color: #3367d6;
 }

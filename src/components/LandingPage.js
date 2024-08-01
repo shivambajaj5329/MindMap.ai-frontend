@@ -3,7 +3,7 @@ import { useNavigate, Navigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useAuth } from '../AuthProvider';
-import styles from './css/LandingPage.css';
+import './css/LandingPage.css';  // Import the CSS file directly
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -49,9 +49,9 @@ function LandingPage() {
   }
 
   return (
-    <div className={styles.landingPage}>
+    <div className="landing-page">
       <h1>{text}</h1>
-      <div className={styles.loginForm}>
+      <div className="login-form">
         <input
           type="text"
           placeholder="Username"
