@@ -81,6 +81,7 @@ function PatientInstance() {
       let defaultLabel = `${file.name.split('.')[0]}_${therapyDate}`;
       const label = summaryLabel || defaultLabel;
       formData.append('label', label);
+      formData.append('model','gemini')
       let endpoint_upload = process.env.REACT_APP_API_ENDPOINT_UPLOAD
       const response = await axios.post(endpoint_upload, formData);
 
