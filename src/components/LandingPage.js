@@ -11,6 +11,7 @@ function LandingPage() {
   const [text, setText] = useState('W');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const fullText = 'Welcome to MindMap';
   const typingSpeed = 200;
 
@@ -37,10 +38,12 @@ function LandingPage() {
 
   const handleLogin = async () => {
     try {
+      setError('');  // Clear any previous error
       await signInWithEmailAndPassword(auth, username, password);
       navigate('/dashboard');
     } catch (error) {
       console.error('Error signing in:', error);
+      setError('Invalid login details');  // Set error message
     }
   };
 
@@ -52,6 +55,7 @@ function LandingPage() {
     <div className="landing-page">
       <h1>{text}</h1>
       <div className="login-form">
+        {error && <p className="error-message">{error}</p>}  {/* Display error message */}
         <input
           type="text"
           placeholder="Username"
