@@ -189,7 +189,7 @@ function PatientInstance() {
           />
         </div>
         <div className="button-container">
-          <button onClick={handleSubmit}>⬆️ Upload File</button>
+          <button onClick={handleSubmit}>⬆️ Generate Insights</button>
         </div>
         {error && <p className="error-message">{error}</p>}
       </div>
