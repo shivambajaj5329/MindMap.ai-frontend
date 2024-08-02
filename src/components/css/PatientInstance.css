@@ -1,6 +1,6 @@
 .patient-instance {
   padding: 20px;
-  padding-top: 120px; /* Gives space for the header */
+  padding-top: 120px;
 }
 
 .patient-instance .patient-header {
@@ -12,7 +12,7 @@
   align-items: flex-start;
   padding: 20px;
   width: 100%;
-  background-color: #f8f9fa; /* Light background for the header */
+  background-color: #f8f9fa;
 }
 
 .patient-instance .patient-details {
@@ -45,67 +45,92 @@
   color: #666;
 }
 
-.patient-instance .upload-container {
-  margin: 20px auto;
+.patient-instance .main-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.patient-instance .left-column,
+.patient-instance .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-instance .upload-container,
+.patient-instance .deidentified-text-container {
+  background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .patient-instance .file-input-wrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .patient-instance .file-upload-label {
   display: inline-block;
-  padding: 10px;
-  background-color: #f0f0f0;
-  color: #333;
-  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: white;
+  border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
 }
 
 .patient-instance .file-name {
-  margin-left: 10px;
+  margin-top: 5px;
+  font-style: italic;
 }
 
-.patient-instance .button-container {
-  margin-top: 20px;
-}
-
-.patient-instance .error-message {
-  color: red;
+.patient-instance input[type="text"],
+.patient-instance input[type="date"],
+.patient-instance textarea,
+.patient-instance .deidentified-text-area {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .patient-instance textarea,
-.patient-instance input[type="text"],
-.patient-instance input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-.patient-instance input[type="file"] {
-  display: none;
+.patient-instance .deidentified-text-area {
+  min-height: 200px;
+  max-height: 400px; /* Added max-height */
+  resize: vertical;
+  overflow: auto; /* Enable scrolling */
 }
 
 .patient-instance button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #2196F3;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .patient-instance button:hover {
-  background-color: #0056b3;
+  background-color: #0b7dda;
+}
+
+.patient-instance button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.patient-instance .error-message {
+  color: #dc3545;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .patient-instance .summary-list {
@@ -113,48 +138,24 @@
 }
 
 .patient-instance .summary-container {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: left;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
 }
 
 .patient-instance .summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  padding: 10px;
+  padding: 15px;
   background-color: #f8f9fa;
-  border-radius: 5px;
-}
-
-.patient-instance .summary-header span {
-  font-weight: bold;
-  flex-grow: 1;
-}
-
-.patient-instance .delete-button {
-  background: none;
-  border: none;
+  border-radius: 8px 8px 0 0;
   cursor: pointer;
-  color: #ff4d4d;
-  font-size: 16px;
-  padding: 5px;
-  transition: color 0.3s ease;
-  margin-left: 10px;
-}
-
-.patient-instance .delete-button:hover {
-  color: #ff0000;
 }
 
 .patient-instance .summary-details {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
+  padding: 15px;
 }
 
 .patient-instance .feedback-buttons {
@@ -167,4 +168,10 @@
   cursor: pointer;
   font-size: 20px;
   padding: 5px;
+  margin-top: 0;
+}
+
+.patient-instance .deidentified-text-area .redacted {
+  background-color: yellow;
+  padding: 2px 0;
 }
