@@ -28,7 +28,7 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 - Node.js and npm installed on your local machine
-- Python3.12 for the backend (Checkout the backend repository)
+- Python3.9 for the backend (Checkout the backend repository here - https://github.com/shivambajaj5329/MindMap.ai-backend )
 
 ### Installation
 
