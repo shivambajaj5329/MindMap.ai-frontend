@@ -222,7 +222,7 @@ function PatientInstance() {
         </div>
         <div className="right-column">
           <div className="deidentified-text-container">
-            <h3>Deidentified Text</h3>
+            <h3>Deidentification Engine</h3>
             <div 
               className="deidentified-text-area"
               contentEditable={true}
