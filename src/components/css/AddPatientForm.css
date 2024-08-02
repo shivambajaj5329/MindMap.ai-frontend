@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #2c3e50;  /* Dark blue background color */
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff; /* Ensure text color is readable on dark background */
+}
+
 /* Add Patient Form CSS */
 .add-patient-form {
   max-width: 400px;
@@ -11,7 +22,7 @@
 .add-patient-form h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #2c3e50;  /* Dark text color */
   font-weight: 600;
 }
 
@@ -23,7 +34,7 @@
 .add-patient-form label {
   margin-bottom: 8px;
   font-weight: 500;
-  color: #34495e;
+  color: #34495e;  /* Dark text color */
 }
 
 .add-patient-form input[type="text"],

@@ -53,7 +53,7 @@ function LandingPage() {
 
   return (
     <div className="landing-page">
-      <h1>{text}</h1>
+      <h1 className='landingpage-header-text'>{text}</h1>
       <div className="login-form">
         {error && <p className="error-message">{error}</p>}  {/* Display error message */}
         <input

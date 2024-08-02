@@ -9,17 +9,19 @@ body, html {
 }
 
 .landing-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  color:white;
   box-sizing: border-box;
 }
 
 .landing-page h1 {
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: 600;
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -33,6 +35,7 @@ body, html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 320px;
+  z-index: 1;
 }
 
 .landing-page .login-form input {
