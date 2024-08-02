@@ -187,16 +187,17 @@ function PatientInstance() {
               {file && <p className="file-name">{file.name}</p>}
             </div>
             <div>
-              <label htmlFor="summaryLabel" className="header-header">Header:</label>
-              <input
-                type="text"
-                id="summaryLabel"
-                placeholder="Enter summary label"
-                value={summaryLabel}
-                onChange={handleLabelChange}
-                className="header-input-head"
-              />
-            </div>
+  <label htmlFor="summaryLabel" className="context-header">Header:</label>
+  <input
+  type="text"
+  id="summaryLabel"
+  placeholder="Enter summary label"
+  value={summaryLabel}
+  onChange={handleLabelChange}
+  className="head-input"
+/>
+</div>
+
             <div>
               <label htmlFor="context" className="context-header">Additional Context:</label>
               <textarea

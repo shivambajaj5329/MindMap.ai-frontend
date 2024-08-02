@@ -170,6 +170,30 @@ body, html {
   cursor: not-allowed;
 }
 
+.patient-instance .head-textarea {
+  width: 100%;
+  font-size: 14px;
+  color: #2c3e50;
+  height: 30px; /* Adjust this value to make it smaller */
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none; /* Prevent resizing */
+}
+
+.patient-instance .head-input {
+  width: 100%;
+  font-size: 14px;
+  color: #2c3e50;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
 .patient-instance .error-message {
   color: #dc3545;
   margin-top: 10px;
