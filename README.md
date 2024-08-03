@@ -76,6 +76,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - shivamb1298@gmail.com
+Shivam Bajaj - shivamb1298@gmail.com
 
 Project Link: https://github.com/shivambajaj5329/MindMap.ai-frontend
