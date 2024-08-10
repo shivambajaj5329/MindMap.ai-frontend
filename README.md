@@ -15,11 +15,8 @@ Depression and other mental health issues can significantly impact a person's li
 
 ## Screenshots
 
-### Login Screen
-![Login Screen](images/login.png)
-
-### Dashboard
-![Dashboard](images/dashboard.png)
+### Working
+![Workflow](images/video.mov)
 
 ## Getting Started
 
