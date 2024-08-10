@@ -244,3 +244,36 @@ body, html {
   background-color: yellow;
   padding: 2px 0;
 }
+.generate-report-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date-range-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.date-range-selector div {
+  display: flex;
+  flex-direction: column;
+}
+
+.generate-report-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.generate-report-button:hover {
+  background-color: #45a049;
+}

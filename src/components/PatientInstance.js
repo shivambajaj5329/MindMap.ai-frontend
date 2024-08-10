@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { FaTrash } from 'react-icons/fa';
+import { FaTrash, FaFileDownload } from 'react-icons/fa';
 import { doc, getDoc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db, auth } from '../firebase';
 import './css/PatientInstance.css';
@@ -20,6 +20,8 @@ function PatientInstance() {
   const [sentimentData, setSentimentData] = useState([]);
   const [patient, setPatient] = useState({});
   const [deidentifiedText, setDeidentifiedText] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   useEffect(() => {
     const fetchPatientData = async () => {
@@ -46,6 +48,8 @@ function PatientInstance() {
   const handleLabelChange = (e) => setSummaryLabel(e.target.value);
   const handleContextChange = (e) => setContext(e.target.value);
   const handleDateChange = (e) => setTherapyDate(e.target.value);
+  const handleStartDateChange = (e) => setStartDate(e.target.value);
+  const handleEndDateChange = (e) => setEndDate(e.target.value);
 
   const textToFile = (text, filename) => {
     const blob = new Blob([text], { type: 'text/plain' });
@@ -161,7 +165,72 @@ function PatientInstance() {
   const highlightRedacted = (text) => {
     return text
       .replace(/\[REDACTED\]/g, '<span class="redacted">[REDACTED]</span>')
-      .replace(/\n/g, '<br><br>'); // Replace newline characters with <br> tags
+      .replace(/\n/g, '<br><br>');
+  };
+
+  const getRelevantSummaries = (start, end) => {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    return summaries.filter(summary => {
+      const summaryDate = new Date(summary.therapyDate);
+      return summaryDate >= startDate && summaryDate <= endDate;
+    });
+  };
+
+  const handleGenerateReport = async () => {
+    if (!startDate || !endDate) {
+      setError('Please select both start and end dates for the report.');
+      return;
+    }
+  
+    try {
+      setLoading(true);
+      const relevantSummaries = getRelevantSummaries(startDate, endDate);
+  
+      if (relevantSummaries.length === 0) {
+        setError('No summaries found within the selected date range.');
+        setLoading(false);
+        return;
+      }
+  
+      const formData = new FormData();
+      formData.append('startDate', startDate);
+      formData.append('endDate', endDate);
+      formData.append('patientName', `${patient.firstName} ${patient.lastName}`);
+  
+      relevantSummaries.forEach((summary, index) => {
+        formData.append(`summaryFile${index}`, JSON.stringify(summary));
+      });
+  
+      // Log FormData contents for debugging
+      console.log('FormData contents:');
+      for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+      }
+  
+      const response = await axios.post(process.env.REACT_APP_API_ENDPOINT_GENERATE_REPORT, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+        responseType: 'blob',
+      });
+  
+      const blob = new Blob([response.data], { type: 'application/pdf' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = `${patient.firstName}_${patient.lastName}_${startDate}_${endDate}.pdf`;
+      link.click();
+  
+      setError('');
+    } catch (error) {
+      console.error('Error generating report:', error);
+      if (error.response) {
+        console.error('Response data:', await error.response.text());
+        console.error('Response status:', error.response.status);
+        console.error('Response headers:', error.response.headers);
+      }
+      setError('Error generating report. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -187,17 +256,16 @@ function PatientInstance() {
               {file && <p className="file-name">{file.name}</p>}
             </div>
             <div>
-  <label htmlFor="summaryLabel" className="context-header">Header:</label>
-  <input
-  type="text"
-  id="summaryLabel"
-  placeholder="Enter summary label"
-  value={summaryLabel}
-  onChange={handleLabelChange}
-  className="head-input"
-/>
-</div>
-
+              <label htmlFor="summaryLabel" className="context-header">Header:</label>
+              <input
+                type="text"
+                id="summaryLabel"
+                placeholder="Enter summary label"
+                value={summaryLabel}
+                onChange={handleLabelChange}
+                className="head-input"
+              />
+            </div>
             <div>
               <label htmlFor="context" className="context-header">Additional Context:</label>
               <textarea
@@ -278,6 +346,33 @@ function PatientInstance() {
             )}
           </div>
         ))}
+      </div>
+      <div className="generate-report-section">
+        <h2>Generate Report</h2>
+        <div className="date-range-selector">
+          <div>
+            <label htmlFor="startDate">Start Date:</label>
+            <input
+              type="date"
+              id="startDate"
+              value={startDate}
+              onChange={handleStartDateChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="endDate">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              value={endDate}
+              onChange={handleEndDateChange}
+            />
+          </div>
+        </div>
+        <button onClick={handleGenerateReport} className="generate-report-button" disabled={loading}>
+          <FaFileDownload /> {loading ? 'Generating...' : 'Generate Report'}
+        </button>
+        {error && <p className="error-message">{error}</p>}
       </div>
     </div>
   );
