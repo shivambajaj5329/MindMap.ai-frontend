@@ -13,10 +13,12 @@ Depression and other mental health issues can significantly impact a person's li
 - AI-driven insights and analysis
 - Easy-to-use interface for adding and managing patient data
 
-## Screenshots
 
 ### Working
-![Workflow](images/video.mp4)
+<video width="320" height="240" controls>
+  <source src="images/video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Getting Started
 
