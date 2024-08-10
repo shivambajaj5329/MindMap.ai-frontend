@@ -16,8 +16,9 @@ body, html {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  color:white;
+  color: white;
   box-sizing: border-box;
+  background-color: #34495e; /* Added background color */
 }
 
 .landing-page h1 {
@@ -28,7 +29,7 @@ body, html {
   text-align: center;
 }
 
-.landing-page .login-form {
+.landing-page .auth-form-container {
   background-color: white;
   padding: 30px;
   border-radius: 8px;
@@ -38,7 +39,7 @@ body, html {
   z-index: 1;
 }
 
-.landing-page .login-form input {
+.landing-page .auth-form input {
   width: 100%;
   padding: 10px 15px;
   margin-bottom: 15px;
@@ -49,12 +50,12 @@ body, html {
   box-sizing: border-box;
 }
 
-.landing-page .login-form input:focus {
+.landing-page .auth-form input:focus {
   border-color: #3498db;
   outline: none;
 }
 
-.landing-page .login-form button {
+.landing-page .auth-form button {
   width: 100%;
   background-color: #4285f4;
   border: none;
@@ -67,11 +68,48 @@ body, html {
   font-size: 14px;
 }
 
-.landing-page .login-form button:hover {
+.landing-page .auth-form button:hover {
   background-color: #3367d6;
 }
 
+.landing-page .auth-toggle {
+  margin-top: 15px;
+  color: #3498db;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.landing-page .auth-toggle:hover {
+  color: #2980b9;
+}
+
 .landing-page .error-message {
-  color: red;
-  margin-bottom: 10px;
+  color: #e74c3c;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Animation for form transition */
+.auth-form-container {
+  transition: all 0.3s ease;
+}
+
+.auth-form {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.auth-form.fade-out {
+  opacity: 0;
+}
+
+
+.landing-page .success-message {
+  color: #2ecc71;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
 }
