@@ -15,10 +15,8 @@ Depression and other mental health issues can significantly impact a person's li
 
 
 ### Working
-<video width="320" height="240" controls>
-  <source src="images/video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![MindMap AI Demo](https://img.youtube.com/vi/h2XwWM39ZJA/0.jpg)](https://www.youtube.com/watch?v=h2XwWM39ZJA)
+
 
 ## Getting Started
 
