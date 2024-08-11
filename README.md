@@ -18,6 +18,38 @@ Depression and other mental health issues can significantly impact a person's li
 [![MindMap AI Demo](https://img.youtube.com/vi/h2XwWM39ZJA/0.jpg)](https://www.youtube.com/watch?v=h2XwWM39ZJA)
 
 
+## Quick Start Guide
+
+- Head over to [MindMapp Link](https://mind-map-ai-frontend.vercel.app)
+
+### 1. Account Setup
+- Click "Sign Up" to create a new account
+
+### 2. Add a Patient
+- Go to Patient Dashboard
+- Click "Add Patient"
+- Upload a headshot from [this folder](https://github.com/shivambajaj5329/MindMap.AI-Resources/tree/main/Headshots%20to%20use)
+
+### 3. Select Conversation
+- Choose a conversation file from [this link](https://github.com/shivambajaj5329/MindMap.AI-Resources/tree/main/Conversation%20Text)
+
+### 4. Session Details
+- Add Session Header
+- Provide additional context
+- Select therapy session date
+
+### 5. Deidentify Text
+- Click "Deidentify" button
+- Review and edit deidentified text if needed
+
+### 6. Generate Insights
+- Click "Generate Insights" button
+
+### 7. Create Report
+- Choose a date range
+- Click "Generate Report" button
+
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
