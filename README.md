@@ -12,10 +12,13 @@ Depression and other mental health issues can significantly impact a person's li
 - Dashboard to manage patient information
 - AI-driven insights and analysis
 - Easy-to-use interface for adding and managing patient data
+- Weekly/Monthly/Yearly Report Generation
 
 
 ### Working
 [![MindMap AI Demo](https://img.youtube.com/vi/h2XwWM39ZJA/0.jpg)](https://www.youtube.com/watch?v=h2XwWM39ZJA)
+
+If you are a therapist meeting your clients virtually and want to try this out, please turn on the transcript transcript saving feature on Google Meet / Zoom / Teams. Do reach out to me to help set up your environment!
 
 
 ## Quick Start Guide
